@@ -8,8 +8,10 @@
 
 import UIKit
 
-class Global {
-    var grocList:String = []
+class Global{
+    var grocList = [String]()
+    var toDoList = [String]()
+    var goalsList = [String]()
 }
 
 let global = Global()
@@ -23,7 +25,7 @@ class GroceriesOneViewController: UIViewController {
     @IBOutlet weak var grocAddItem: UITextField!
     
     @IBAction func grocListAdd(_ sender: UIButton) {
-        let newItem = self.grocAddItem.text
+        let newItem = grocAddItem.text
         global.grocList.append(newItem!)
         grocAddItem.text = ""
     }

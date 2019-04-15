@@ -11,6 +11,10 @@ import UIKit
 class GroceriesTwoViewController: UIViewController {
 
     @IBOutlet weak var grocListPrint: UILabel!
+    
+    @IBAction func clearList(_ sender: Any) {
+        global.grocList.removeAll()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,11 @@ class GroceriesTwoViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        grocListPrint.text = "\(grocList)"
+    
+        for (index, grocList) in global.grocList.enumerated() {
+            grocListPrint.text? += "\n\(global.grocList[index])"
+            
+        }
     }
     
 

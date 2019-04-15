@@ -9,6 +9,21 @@
 import UIKit
 
 class ToDoOneViewController: UIViewController {
+    
+    @IBOutlet weak var toDoAddItem: UITextField!
+    
+    @IBAction func keyboardHide(_ sender: Any) {
+        toDoAddItem.resignFirstResponder()
+    }
+    
+    
+    @IBAction func toDoListAdd(_ sender: Any) {
+        let newItem = toDoAddItem.text
+        global.toDoList.append(newItem!)
+        toDoAddItem.text = ""
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

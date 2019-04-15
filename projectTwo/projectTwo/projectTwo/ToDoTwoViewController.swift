@@ -10,11 +10,26 @@ import UIKit
 
 class ToDoTwoViewController: UIViewController {
 
+    @IBOutlet weak var toDoListPrint: UILabel!
+    
+    @IBAction func clearList(_ sender: Any) {
+        global.toDoList.removeAll()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        for (index, toDoList) in global.toDoList.enumerated() {
+            toDoListPrint.text? += "\n\(global.toDoList[index])"
+            
+        }
+    }
+    
     
 
     /*

@@ -9,6 +9,18 @@
 import UIKit
 
 class GoalsOneViewController: UIViewController {
+    
+    @IBOutlet weak var goalsAddItem: UITextField!
+    
+    @IBAction func keyboardHide(_ sender: Any) {
+        goalsAddItem.resignFirstResponder()
+    }
+    
+    @IBAction func goalsListAdd(_ sender: Any) {
+        let newItem = goalsAddItem.text
+        global.goalsList.append(newItem!)
+        goalsAddItem.text = ""
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

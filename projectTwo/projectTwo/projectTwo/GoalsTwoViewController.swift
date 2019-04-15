@@ -9,11 +9,26 @@
 import UIKit
 
 class GoalsTwoViewController: UIViewController {
+    
+    @IBOutlet weak var goalsListPrint: UILabel!
+    
+    @IBAction func clearList(_ sender: Any) {
+        global.goalsList.removeAll()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        for (index, goalsList) in global.goalsList.enumerated() {
+            goalsListPrint.text? += "\n\(global.goalsList[index])"
+            
+        }
     }
     
 
