@@ -9,13 +9,13 @@
 import UIKit
 
 class GroceriesTwoViewController: UIViewController {
-
-    @IBOutlet weak var grocListPrint: UILabel!
     
     @IBAction func clearList(_ sender: Any) {
         global.grocList.removeAll()
     }
-
+    
+    @IBOutlet weak var grocListPrint: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

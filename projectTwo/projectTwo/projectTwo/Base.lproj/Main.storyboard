@@ -327,7 +327,7 @@
                         <viewLayoutGuide key="safeArea" id="j9X-X7-cDZ"/>
                     </view>
                     <connections>
-                        <outlet property="grocListPrint" destination="mMw-IK-V9n" id="QbH-Nf-ExH"/>
+                        <outlet property="grocListPrint" destination="mMw-IK-V9n" id="MRp-iZ-eDN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1E-BN-gXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
